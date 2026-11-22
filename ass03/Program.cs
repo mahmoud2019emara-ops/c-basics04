@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Reflection;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ass03
@@ -39,18 +40,23 @@ namespace ass03
         //    prices = new double[] { 10.0, 12.5, 15.0 };
         //}
 
-        static bool TryGetPrice(string title, out double price) 
+        //static bool TryGetPrice(string title, out double price) 
+        //{
+        //    if (title == "clean code")
+        //    {
+        //        price = 25.5;
+        //        return true;
+        //    }
+        //    else 
+        //    {
+        //        price = 0;
+        //        return false;
+        //    }
+        //}
+
+        static void PrintBookInfo(string title, int pages = 300) 
         {
-            if (title == "clean code")
-            {
-                price = 25.5;
-                return true;
-            }
-            else 
-            {
-                price = 0;
-                return false;
-            }
+            Console.WriteLine($"{title}:{pages}");
         }
 
         static void Main(string[] args)
@@ -122,13 +128,18 @@ namespace ass03
             #region question 9
             //Write a method bool TryGetPrice(string title, out double price) that returns true and sets price to 25.5 if title is "Clean Code", 
             //otherwise returns false and sets price to 0.Call it and print the price if found
-            string? title = "clean code";
-            bool istitle=TryGetPrice(title, out double price);
-            Console.WriteLine(istitle);
-            Console.WriteLine(price);
-              
-               
-               
+            //string? title = "clean code";
+            //bool istitle=TryGetPrice(title, out double price);
+            //Console.WriteLine(istitle);
+            //Console.WriteLine(price);
+            #endregion
+
+            #region question 10
+            //Write a method PrintBookInfo(string title, int pages = 300) where pages is optional.Call it once with only a title, 
+            //and once passing both a title and pages.
+            string title = "clean code";
+            PrintBookInfo(title); 
+            PrintBookInfo(title , pages);
             #endregion
         }
     }
