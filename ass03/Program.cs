@@ -27,12 +27,9 @@ namespace ass03
             #region question 3
             //Write a method called PrintWelcomeMessage that takes no parameters
             // and prints "Welcome to the Library!".Call it from Main.
-
-            #endregion
-            #region question 4
-
             PrintWelcomeMessage();
             #endregion
+            
         }
     }
 }
