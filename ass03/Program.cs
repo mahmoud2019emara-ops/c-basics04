@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ass03
 {
@@ -27,11 +28,17 @@ namespace ass03
         //    prices[0] -= 5;
         //}
 
-        static int AddBonusPagesref(ref int pages)
+        //static int AddBonusPagesref(ref int pages)
+        //{
+        //    pages += 50;
+        //    return pages;
+        //}
+
+        static void ReplaceArray(ref double[] prices) 
         {
-            pages += 50;
-            return pages;
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
+
         static void Main(string[] args)
         {
             #region question 1
@@ -82,13 +89,21 @@ namespace ass03
             #region question 7
             //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. Call it and print pages afterward.
             //    How is the result different from question 5 ?
-            int pages = 400;
-            Console.WriteLine(pages);
-            AddBonusPagesref(ref pages);
-            Console.WriteLine($" pages afterward :{pages}");
+            //int pages = 400;
+            //Console.WriteLine(pages);
+            //AddBonusPagesref(ref pages);
+            //Console.WriteLine($" pages afterward :{pages}");
             // pages will change beacause we passing parameter by reference 
             #endregion
+            #region question 8
+            //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }
+            //.Call it with your prices array and print prices.Length afterward.
 
+            double[] prices = { 25.5, 40.0 };
+            ReplaceArray(ref prices);
+            Console.WriteLine(prices.Length);
+
+            #endregion
         }
     }
 }
