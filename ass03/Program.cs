@@ -4,6 +4,10 @@ namespace ass03
 {
     internal class Program
     {
+        static void PrintWelcomeMessage() 
+        {
+            Console.WriteLine("Welcome to the Library!");
+        }
         static void Main(string[] args)
         {
             #region question 1
@@ -16,12 +20,19 @@ namespace ass03
             #region question 2
             //Create a 2x2 multidimensional array int[,] shelfCopies 
             //where shelf 0 has 3, 5 copies and shelf 1 has 1, 4 copies.Print the number of copies on shelf 1, slot 0.
-            int[,] shelfCopies = { {3,5 }, {1,4 } };
-            Console.WriteLine(shelfCopies[1,0]);
-
-
+            //int[,] shelfCopies = { {3,5 }, {1,4 } };
+            //Console.WriteLine(shelfCopies[1,0]);
             #endregion
 
+            #region question 3
+            //Write a method called PrintWelcomeMessage that takes no parameters
+            // and prints "Welcome to the Library!".Call it from Main.
+
+            #endregion
+            #region question 4
+
+            PrintWelcomeMessage();
+            #endregion
         }
     }
 }
