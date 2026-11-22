@@ -4,9 +4,15 @@ namespace ass03
 {
     internal class Program
     {
-        static void PrintWelcomeMessage() 
-        {
-            Console.WriteLine("Welcome to the Library!");
+        //static void PrintWelcomeMessage() 
+        //{
+        //    Console.WriteLine("Welcome to the Library!");
+        //}
+
+        static void PrintBookTitle(string title) 
+        { 
+          if(title!=null)
+                Console.WriteLine("Book title: " + title);
         }
         static void Main(string[] args)
         {
@@ -27,9 +33,15 @@ namespace ass03
             #region question 3
             //Write a method called PrintWelcomeMessage that takes no parameters
             // and prints "Welcome to the Library!".Call it from Main.
-            PrintWelcomeMessage();
+            //PrintWelcomeMessage();
             #endregion
-            
+
+            #region question 4
+            //Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with "Clean Code".
+            string title = "clean code";
+            PrintBookTitle(title);
+            #endregion
+
         }
     }
 }
