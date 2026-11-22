@@ -22,9 +22,15 @@ namespace ass03
 
         //}
 
-        static void ApplyDiscount(double[] prices) 
+        //static void ApplyDiscount(double[] prices) 
+        //{
+        //    prices[0] -= 5;
+        //}
+
+        static int AddBonusPagesref(ref int pages)
         {
-            prices[0] -= 5;
+            pages += 50;
+            return pages;
         }
         static void Main(string[] args)
         {
@@ -67,10 +73,19 @@ namespace ass03
             #region question 6
             //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it with double[] prices = { 25.5, 40.0 }; 
             //and print prices[0] afterward.What do you expect to see, and why? 
-            double[] prices = { 25.5, 40.0 };
-            ApplyDiscount(prices);
-            Console.WriteLine($"prices[0] afterward: {prices[0]}");
+            //double[] prices = { 25.5, 40.0 };
+            //ApplyDiscount(prices);
+            //Console.WriteLine($"prices[0] afterward: {prices[0]}");
             // prices[0] will change because tha reference type parameters
+            #endregion
+
+            #region question 7
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. Call it and print pages afterward.
+            //    How is the result different from question 5 ?
+            int pages = 400;
+            Console.WriteLine(pages);
+            AddBonusPagesref(ref pages);
+            Console.WriteLine($" pages afterward :{pages}");
             #endregion
 
         }
