@@ -15,11 +15,16 @@ namespace ass03
         //        Console.WriteLine("Book title: " + title);
         //}
 
-        static int AddBonusPages(int pages) 
+        //static int AddBonusPages(int pages) 
+        //{
+        //    pages += 50;
+        //    return pages;
+
+        //}
+
+        static void ApplyDiscount(double[] prices) 
         {
-            pages += 50;
-            return pages;
-                
+            prices[0] -= 5;
         }
         static void Main(string[] args)
         {
@@ -52,11 +57,20 @@ namespace ass03
             #region question 5
             //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and
             //print pages afterward. What do you expect to see, and why?
-            int pages = 400;
-            Console.WriteLine(pages);
-            AddBonusPages(pages);
-            Console.WriteLine(pages);
+            //int pages = 400;
+            //Console.WriteLine(pages);
+            //AddBonusPages(pages);
+            //Console.WriteLine(pages);
             // pages still 400 because we call it value type parameters
+            #endregion
+
+            #region question 6
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0].Call it with double[] prices = { 25.5, 40.0 }; 
+            //and print prices[0] afterward.What do you expect to see, and why? 
+            double[] prices = { 25.5, 40.0 };
+            ApplyDiscount(prices);
+            Console.WriteLine($"prices[0] afterward: {prices[0]}");
+
             #endregion
 
         }
