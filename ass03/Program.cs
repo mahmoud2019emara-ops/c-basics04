@@ -9,10 +9,17 @@ namespace ass03
         //    Console.WriteLine("Welcome to the Library!");
         //}
 
-        static void PrintBookTitle(string title) 
-        { 
-          if(title!=null)
-                Console.WriteLine("Book title: " + title);
+        //static void PrintBookTitle(string title) 
+        //{ 
+        //  if(title!=null)
+        //        Console.WriteLine("Book title: " + title);
+        //}
+
+        static int AddBonusPages(int pages) 
+        {
+            pages += 50;
+            return pages;
+                
         }
         static void Main(string[] args)
         {
@@ -38,8 +45,18 @@ namespace ass03
 
             #region question 4
             //Write a method PrintBookTitle(string title) that prints "Book title: " + title.Call it with "Clean Code".
-            string title = "clean code";
-            PrintBookTitle(title);
+            //string title = "clean code";
+            //PrintBookTitle(title);
+            #endregion
+
+            #region question 5
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable int pages = 400; and
+            //print pages afterward. What do you expect to see, and why?
+            int pages = 400;
+            Console.WriteLine(pages);
+            AddBonusPages(pages);
+            Console.WriteLine(pages);
+            // pages still 400 because we call it value type parameters
             #endregion
 
         }
