@@ -70,7 +70,7 @@ namespace ass03
             double[] prices = { 25.5, 40.0 };
             ApplyDiscount(prices);
             Console.WriteLine($"prices[0] afterward: {prices[0]}");
-
+            // prices[0] will change because tha reference type parameters
             #endregion
 
         }
