@@ -34,9 +34,23 @@ namespace ass03
         //    return pages;
         //}
 
-        static void ReplaceArray(ref double[] prices) 
+        //static void ReplaceArray(ref double[] prices) 
+        //{
+        //    prices = new double[] { 10.0, 12.5, 15.0 };
+        //}
+
+        static bool TryGetPrice(string title, out double price) 
         {
-            prices = new double[] { 10.0, 12.5, 15.0 };
+            if (title == "clean code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else 
+            {
+                price = 0;
+                return false;
+            }
         }
 
         static void Main(string[] args)
@@ -99,10 +113,22 @@ namespace ass03
             //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a new array { 10.0, 12.5, 15.0 }
             //.Call it with your prices array and print prices.Length afterward.
 
-            double[] prices = { 25.5, 40.0 };
-            ReplaceArray(ref prices);
-            Console.WriteLine(prices.Length);
+            //double[] prices = { 25.5, 40.0 };
+            //ReplaceArray(ref prices);
+            //Console.WriteLine(prices.Length);
 
+            #endregion
+
+            #region question 9
+            //Write a method bool TryGetPrice(string title, out double price) that returns true and sets price to 25.5 if title is "Clean Code", 
+            //otherwise returns false and sets price to 0.Call it and print the price if found
+            string? title = "clean code";
+            bool istitle=TryGetPrice(title, out double price);
+            Console.WriteLine(istitle);
+            Console.WriteLine(price);
+              
+               
+               
             #endregion
         }
     }
